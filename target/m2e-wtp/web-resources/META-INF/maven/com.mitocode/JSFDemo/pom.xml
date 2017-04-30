@@ -4,7 +4,7 @@
   <artifactId>JSFDemo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  
+  <!-- Estas dependencias son requeridas para el JSF -->
   <dependencies>
   		<dependency>
 			<groupId>com.sun.faces</groupId>
@@ -19,7 +19,18 @@
 			<version>2.2.13</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.4-1201-jdbc41</version>
+		</dependency>
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>6.1</version>
+		</dependency>
   </dependencies>
+  
   
   <build>
 		<finalName>JSFDemo</finalName>

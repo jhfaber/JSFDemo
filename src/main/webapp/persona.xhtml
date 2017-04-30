@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+
+<h:head></h:head> 
+<body> 
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputText value="Id" rendered="#{personaBean.persona.id > 0}" />
+			<h:inputText value="#{personaBean.persona.id}" rendered="#{personaBean.persona.id > 0}"/>
+			
+			<h:outputText value="Nombre" />
+			<h:inputText value="#{personaBean.persona.nombres}"/>
+			
+			<h:outputText value="Apellidos" />
+			<h:inputText value="#{personaBean.persona.apellidos}"/>
+			
+			<h:commandButton action="personas" actionListener="#{personaBean.registrar()}" value="Aceptar"/>
+			<h:commandButton action="personas.xhtml" value="Cancelar" inmediate="true"/>
+		</h:panelGrid>
+		
+		<p:separator />
+		
+		<h:panelGrid columns="2">
+		
+			<p:outputLabel value="Id" rendered="#{personaBean.persona.id > 0}"/>
+			<p:inputText value="#{personaBean.persona.id}" rendered="#{personaBean.persona.id > 0}"/>
+			
+			<p:outputLabel value="Nombre" />
+			<p:inputText value="#{personaBean.persona.nombres}" required="true" />			
+			
+			<p:outputLabel value="Apellidos" />
+			<p:inputText value="#{personaBean.persona.apellidos}" required="true" />
+			
+			<p:commandButton action="personas" actionListener="#{personaBean.registrar()}" value="Aceptar" />
+			<p:commandButton action="personas" value="Cancelar" immediate="true"/>
+		
+		</h:panelGrid>	
+	</h:form>
+
+</body> 
+</html>
